@@ -12,3 +12,4 @@ c:\Users\DELL\Downloads\UEA 2025\Estructura de Datos\Nueva carpeta\SEMANA 14\obj
 c:\Users\DELL\Downloads\UEA 2025\Estructura de Datos\Nueva carpeta\SEMANA 14\obj\Debug\net9.0\SEMANA 14.pdb
 c:\Users\DELL\Downloads\UEA 2025\Estructura de Datos\Nueva carpeta\SEMANA 14\obj\Debug\net9.0\SEMANA 14.genruntimeconfig.cache
 c:\Users\DELL\Downloads\UEA 2025\Estructura de Datos\Nueva carpeta\SEMANA 14\obj\Debug\net9.0\ref\SEMANA 14.dll
+c:\Users\DELL\Downloads\UEA 2025\Estructura de Datos\Nueva carpeta\SEMANA 14\obj\Debug\net9.0\SEMANA 14.sourcelink.json
