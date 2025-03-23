@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\DELL\\Downloads\\UEA 2025\\Estructura de Datos\\Nueva carpeta\\SEMANA 14\\SEMANA 14.csproj": {}
+    "c:\\Users\\DELL\\Downloads\\UEA 2025\\Estructura de Datos\\Nueva carpeta\\SEMANA-14\\SEMANA 14\\SEMANA 14.csproj": {}
   },
   "projects": {
-    "c:\\Users\\DELL\\Downloads\\UEA 2025\\Estructura de Datos\\Nueva carpeta\\SEMANA 14\\SEMANA 14.csproj": {
+    "c:\\Users\\DELL\\Downloads\\UEA 2025\\Estructura de Datos\\Nueva carpeta\\SEMANA-14\\SEMANA 14\\SEMANA 14.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\DELL\\Downloads\\UEA 2025\\Estructura de Datos\\Nueva carpeta\\SEMANA 14\\SEMANA 14.csproj",
+        "projectUniqueName": "c:\\Users\\DELL\\Downloads\\UEA 2025\\Estructura de Datos\\Nueva carpeta\\SEMANA-14\\SEMANA 14\\SEMANA 14.csproj",
         "projectName": "SEMANA 14",
-        "projectPath": "c:\\Users\\DELL\\Downloads\\UEA 2025\\Estructura de Datos\\Nueva carpeta\\SEMANA 14\\SEMANA 14.csproj",
+        "projectPath": "c:\\Users\\DELL\\Downloads\\UEA 2025\\Estructura de Datos\\Nueva carpeta\\SEMANA-14\\SEMANA 14\\SEMANA 14.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\DELL\\Downloads\\UEA 2025\\Estructura de Datos\\Nueva carpeta\\SEMANA 14\\obj\\",
+        "outputPath": "c:\\Users\\DELL\\Downloads\\UEA 2025\\Estructura de Datos\\Nueva carpeta\\SEMANA-14\\SEMANA 14\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"

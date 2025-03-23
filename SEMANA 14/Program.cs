@@ -79,59 +79,6 @@ class ArbolBinarioBusqueda
         }
     }
 
-    // Método público para eliminar un valor del árbol
-    public void Eliminar(string valor)
-    {
-        raiz = EliminarRecursivo(raiz, valor);
-    }
-
-    // Método recursivo para eliminar un nodo del árbol
-    private Nodo EliminarRecursivo(Nodo nodo, string valor)
-    {
-        if (nodo == null)
-        {
-            return nodo; // Si el nodo es nulo, no se hace nada
-        }
-
-        if (string.Compare(valor, nodo.Valor) < 0)
-        {
-            nodo.Izquierda = EliminarRecursivo(nodo.Izquierda, valor); // Buscar en el subárbol izquierdo
-        }
-        else if (string.Compare(valor, nodo.Valor) > 0)
-        {
-            nodo.Derecha = EliminarRecursivo(nodo.Derecha, valor); // Buscar en el subárbol derecho
-        }
-        else
-        {
-            // Caso 1: Nodo con un solo hijo o sin hijos
-            if (nodo.Izquierda == null)
-            {
-                return nodo.Derecha;
-            }
-            else if (nodo.Derecha == null)
-            {
-                return nodo.Izquierda;
-            }
-
-            // Caso 2: Nodo con dos hijos
-            nodo.Valor = ObtenerValorMinimo(nodo.Derecha); // Obtener el sucesor inmediato
-            nodo.Derecha = EliminarRecursivo(nodo.Derecha, nodo.Valor); // Eliminar el sucesor inmediato
-        }
-        return nodo;
-    }
-
-    // Método para obtener el valor mínimo del subárbol derecho
-    private string ObtenerValorMinimo(Nodo nodo)
-    {
-        string minValue = nodo.Valor;
-        while (nodo.Izquierda != null)
-        {
-            minValue = nodo.Izquierda.Valor;
-            nodo = nodo.Izquierda;
-        }
-        return minValue;
-    }
-
     // Método público para recorrer el árbol en orden (InOrden)
     public void RecorrerInOrden()
     {
@@ -147,6 +94,24 @@ class ArbolBinarioBusqueda
             RecorrerInOrdenRecursivo(nodo.Izquierda); // Primero el subárbol izquierdo
             Console.Write(nodo.Valor + " "); // Luego el nodo actual
             RecorrerInOrdenRecursivo(nodo.Derecha); // Finalmente el subárbol derecho
+        }
+    }
+
+    // Método público para recorrer el árbol en orden (PostOrden)
+    public void RecorrerPostOrden()
+    {
+        RecorrerPostOrdenRecursivo(raiz);
+        Console.WriteLine(); // Salto de línea después del recorrido
+    }
+
+    // Método recursivo para el recorrido PostOrden
+    private void RecorrerPostOrdenRecursivo(Nodo nodo)
+    {
+        if (nodo != null)
+        {
+            RecorrerPostOrdenRecursivo(nodo.Izquierda); // Primero el subárbol izquierdo
+            RecorrerPostOrdenRecursivo(nodo.Derecha); // Luego el subárbol derecho
+            Console.Write(nodo.Valor + " "); // Finalmente el nodo actual
         }
     }
 }
@@ -166,8 +131,8 @@ class Program
             Console.WriteLine("\n--- Menú Árbol Binario de Cadenas ---");
             Console.WriteLine("1. Insertar");
             Console.WriteLine("2. Buscar");
-            Console.WriteLine("3. Eliminar");
-            Console.WriteLine("4. Recorrido InOrden");
+            Console.WriteLine("3. Recorrido InOrden");
+            Console.WriteLine("4. Recorrido PostOrden");
             Console.WriteLine("5. Salir");
             Console.Write("Elige una opción: ");
             opcion = int.Parse(Console.ReadLine());
@@ -186,13 +151,12 @@ class Program
                     Console.WriteLine(arbol.Buscar(valor) != null ? "Palabra encontrada" : "Palabra no encontrada");
                     break;
                 case 3:
-                    Console.Write("Ingrese palabra a eliminar: ");
-                    valor = Console.ReadLine();
-                    arbol.Eliminar(valor); // Eliminar la palabra ingresada
-                    break;
-                case 4:
                     Console.WriteLine("Recorrido InOrden:");
                     arbol.RecorrerInOrden(); // Mostrar el recorrido inorden del árbol
+                    break;
+                case 4:
+                    Console.WriteLine("Recorrido PostOrden:");
+                    arbol.RecorrerPostOrden(); // Mostrar el recorrido postorden del árbol
                     break;
                 case 5:
                     Console.WriteLine("Saliendo..."); // Salir del programa
